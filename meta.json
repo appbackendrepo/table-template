@@ -1,0 +1,10 @@
+{
+    "title": {
+        "type": "text",
+        "value": "Table Template"
+    },
+    "description": {
+        "type": "text",
+        "value": "A template demo for table backend"
+    }
+}
