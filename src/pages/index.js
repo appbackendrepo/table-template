@@ -23,7 +23,7 @@ export default function Home() {
             stopper = false;
             try {
                 const res = await fetch(
-                    `https://api.tablebackend.com/v1/rows/4PtVUNeRdfnM?columnFields=1`,
+                    `${process.env.NEXT_PUBLIC_TABLE_BACKEND_API}?columnFields=1`,
                     {
                         method: 'GET',
                         headers: {
@@ -121,7 +121,7 @@ export default function Home() {
         const newTimer = setTimeout(async () => {
             try {
                 const res = await fetch(
-                    `https://api.tablebackend.com/v1/rows/4PtVUNeRdfnM/search?q=${value}`,
+                    `${process.env.NEXT_PUBLIC_TABLE_BACKEND_API}/search?q=${value}`,
                     {
                         method: 'GET',
                         headers: {
@@ -136,7 +136,7 @@ export default function Home() {
                 console.error(error);
                 // handle error
             }
-        }, 1000);
+        }, 500);
 
         setTimer(newTimer);
     };
